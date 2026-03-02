@@ -1,13 +1,13 @@
-import { Link, useLocation } from "react-router"
+import { Link } from "react-router"
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, navigationMenuTriggerStyle } from "../ui/navigation-menu"
 
 export const CustomMenu = () => {
 
-    const { pathname } = useLocation();
+    // const { pathname } = useLocation();
 
-    const isActive = (path: string) => {
-        return pathname == path;
-    }
+    // const isActive = (path: string) => {
+    //     return pathname == path;
+    // }
 
     return (
         <NavigationMenu>

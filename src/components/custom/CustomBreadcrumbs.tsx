@@ -1,6 +1,6 @@
-import { DotIcon, SlashIcon } from "lucide-react"
+import { SlashIcon } from "lucide-react"
 import { Link } from "react-router"
-import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage } from "../ui/breadcrumb"
+import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator } from "../ui/breadcrumb"
 
 interface Breadcrumb {
     label: string;
