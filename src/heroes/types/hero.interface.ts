@@ -1,4 +1,5 @@
 export interface Hero {
+    map: any;
     id: string;
     name: string;
     slug: string;
