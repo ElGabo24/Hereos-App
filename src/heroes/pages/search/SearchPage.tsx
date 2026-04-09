@@ -13,8 +13,8 @@ export const SearchPage = () => {
 
     const [searchParams, _] = useSearchParams();
 
-    const name = searchParams.get('name') ?? '';
-    const strength = Number(searchParams.get('strength') ?? '');
+    const name = searchParams.get('name') ?? undefined;
+    const strength = Number(searchParams.get('strength')) ?? undefined;
 
     const { data: searchData } = useQuery({
         queryKey: ['search-heroes', { name, strength }],

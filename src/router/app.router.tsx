@@ -28,6 +28,7 @@ export const appRouter = createBrowserRouter([
             },
             {
                 path: '*',
+                // element: <h1>404</h1>,
                 element: <Navigate to="/" />
             }
         ]

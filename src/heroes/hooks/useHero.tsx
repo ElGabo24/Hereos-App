@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query"
-import { getHeroBySlugAction } from "../actions/get-hero-by-slug.actiom"
+import { getHeroBySlugAction } from "../actions/get-hero-by-slug.action"
 
 interface Props {
     idSlug: string

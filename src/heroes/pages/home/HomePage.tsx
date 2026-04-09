@@ -29,7 +29,6 @@ export const HomePage = () => {
 
     const { data: summary } = useHeroSummary();
 
-
     return (
         <>
             <>

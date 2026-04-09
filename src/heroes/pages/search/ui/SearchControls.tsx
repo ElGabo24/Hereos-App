@@ -17,7 +17,7 @@ export const SearchControls = () => {
     const inputRef = useRef<HTMLInputElement>(null);
 
     const activeAccordion = searchParams.get('active-accordion') ?? '';
-    const strength = Number(searchParams.get('strength') ?? '');
+    const strength = Number(searchParams.get('strength') ?? '0');
 
     const setQueryParam = (name: string, value: string) => {
         setSearchParams((prev) => {
@@ -75,7 +75,11 @@ export const SearchControls = () => {
             </div>
 
             {/* Advanced Filters */}
-            <Accordion type="single" collapsible value={activeAccordion}>
+            <Accordion
+                type="single"
+                collapsible value={activeAccordion}
+                data-testid="accordion"
+            >
                 <AccordionItem value="advanced-filters">
                     {/* <AccordionTrigger>Is it accessible?</AccordionTrigger> */}
                     <AccordionContent>

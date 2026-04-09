@@ -16,8 +16,12 @@ export const HeroStats = () => {
         (favoriteCount / summary.totalHeroes) * 100
     ).toFixed(2) : 0;
 
+    if (!summary) {
+        return <div>Loading...</div>
+    }
+
     // const percentageFavorite = useMemo(() => {
-    //     if (!summary) return 0;
+    //     if (!summary) return 0;  
     //     return ((favoriteCount / summary.totalHeroes) * 100).toFixed(1);
     // }, [favoriteCount, summary]);
 
@@ -43,8 +47,16 @@ export const HeroStats = () => {
                 title="Favoritos"
                 icon={<Heart className="h-4 w-4 text-muted-foreground" />}
             >
-                <div className="text-2xl font-bold text-red-600">{favoriteCount}</div>
-                <p className="text-xs text-muted-foreground">
+                <div
+                    className="text-2xl font-bold text-red-600"
+                    data-testid="favorite-count"
+                >
+                    {favoriteCount}
+                </div>
+                <p
+                    className="text-xs text-muted-foreground"
+                    data-testid="favorite-percentage"
+                >
                     {percentageFavorite}% of total
                 </p>
             </HeroStatCard>
